@@ -1,0 +1,40 @@
+*,*::after, *::before{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+}
+li{
+    list-style: none;
+}
+a{
+  text-decoration: none;
+  color: rgb(178, 178, 178); 
+  width: 0%; 
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 85px;
+    /* height: 18vh; */
+    /* gap: 170px; */
+    position: relative;
+    z-index: 1;
+}
+.navbar{
+    display: flex;
+    gap: 45px; 
+}
+.logo {
+    width: 200px; 
+    display: block; 
+}
+
+
+
