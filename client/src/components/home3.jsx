@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/home2.css"
 import missiya from "../images/missiya.png"
 import security from "../images/security.png"
@@ -21,6 +21,20 @@ import facebook from "../images/facebooklogo.png";
 
 
 const Home3 = () => {
+    const [likeCount1, setLikeCount1] = useState(0); 
+    const [likeCount2, setLikeCount2] = useState(0); 
+    const [likeCount3, setLikeCount3] = useState(0); 
+    const handleLikeClick1 = () => {
+    setLikeCount1(likeCount1 + 1);
+    }  
+    const handleLikeClick2 = () => {
+    setLikeCount2(likeCount2 + 1);
+    }  
+    const handleLikeClick3 = () => {
+    setLikeCount3(likeCount3 + 1);
+    }  
+
+
     return (
         <div className="home3">
             <div className="home3__container">
@@ -58,23 +72,30 @@ const Home3 = () => {
                                 <p className="time">22 Noyabr, 19:51</p>
                                 </div>
                                 <div className="like_icons">
-                                <img className="heart" src={heart} alt="" />
-                                <p className="like">153</p>
+                                <div className="like_icons">
+                                        <img
+                                            className="heart"
+                                            src={heart}
+                                            alt="heart"
+                                            onClick={handleLikeClick1} 
+                                        />
+                                        <p className="like">{likeCount1}</p>
                                 </div>
                                 <div className="comment_icons">
                                 <img className="chat" src={chat} alt="" />
                                 <p className="comment_number">47</p>
                                 </div>
                             </div>
+                        </div>
                             <div className="icons2">
                                 <div className="bookmark_icons">
                                 <img className="bookmark" src={bookmark} alt="" />
                                 <img className="menu" src={menu} alt="" />
                                 </div>
                             </div>
-                        </div>
                     </div>
-                    <div className="blog_card2">
+                </div>
+                <div className="blog_card2">
                         <div className="blog_card2_info">
                             <div className="card2_info">
                                 <p id="p1_card">Etik Xakinq: Ən Çətin Simulyasiyalar</p>
@@ -95,8 +116,12 @@ const Home3 = () => {
                                 <p className="time">22 Noyabr, 19:51</p>
                                 </div>
                                 <div className="like_icons">
-                                <img className="heart" src={heart} alt="" />
-                                <p className="like">153</p>
+                                <img
+                                    className="heart"
+                                    src={heart}
+                                    alt="heart"
+                                    onClick={handleLikeClick2} />
+                                    <p className="like">{likeCount2}</p>
                                 </div>
                                 <div className="comment_icons">
                                 <img className="chat" src={chat} alt="" />
@@ -132,8 +157,12 @@ const Home3 = () => {
                                 <p className="time">22 Noyabr, 19:51</p>
                                 </div>
                                 <div className="like_icons">
-                                <img className="heart" src={heart} alt="" />
-                                <p className="like">153</p>
+                                <img
+                                className="heart"
+                                src={heart}
+                                alt="heart"
+                                onClick={handleLikeClick3} />
+                                <p className="like">{likeCount3}</p>
                                 </div>
                                 <div className="comment_icons">
                                 <img className="chat" src={chat} alt="" />
@@ -148,7 +177,6 @@ const Home3 = () => {
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
             <svg viewBox="0 0 1867.81 167.13" xmlns="http://www.w3.org/2000/svg">
                 <path id="wavePath" fill="transparent" d="M0,83.56 Q150,167.13 300,83.56 T600,83.56 T900,83.56 T1200,83.56 T1500,83.56 T1800,83.56 T1800,83.56" />
@@ -230,12 +258,12 @@ const Home3 = () => {
                     </div>
                 </div>
             </div>
+            </div>
 
 
 
-)
-}
-    
+        );
+    };
    
 
 

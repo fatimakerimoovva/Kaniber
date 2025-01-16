@@ -191,6 +191,7 @@ body {
 
 .blog_card1{
     width: 992px;
+    height: 220px;
     transform: rotate(-9.449deg);
     padding: 16px 10px;
     border-radius: 12px;
@@ -266,6 +267,7 @@ body {
     width: 28px;
     height: 28px;
     transform: rotate(9deg);
+    cursor: pointer;
 }
 .comment_icons{
     display: flex;
@@ -723,12 +725,14 @@ margin-left: 5px;
     height: 24px; /* Eyni ölçü bütün ikonlar üçün */
     object-fit: contain;
     color: #BFBFBF;
+    cursor: pointer;
 }
 
 .social-item p {
     font-size: 14px;
     font-weight: normal;
     margin: 0;
+    cursor: pointer;
 }
 
 .contact #c1{
